@@ -1,14 +1,13 @@
 process.env.UV_THREADPOOL_SIZE = 12;
 
-const https = require('https');
-const crypto = require('crypto');
-const fs = require('fs');
+import { request } from 'https';
+import { pbkdf2 } from 'crypto';
+import { readFile } from 'fs';
 
 const start = Date.now();
 
 function doRequest() {
-  https
-    .request('https://www.google.com', res => {
+  request('https://www.google.com', res => {
       res.on('data', () => {});
       res.on('end', () => {
         console.log("https.request():  ", Date.now() - start);
@@ -18,7 +17,7 @@ function doRequest() {
 }
 
 function doHash() {
-  crypto.pbkdf2('a', 'b', 100000, 512, 'sha512', () => {
+  pbkdf2('a', 'b', 100000, 512, 'sha512', () => {
     console.log('Hash:', Date.now() - start);
   });
 }
@@ -31,7 +30,7 @@ doRequest();
 doRequest();
 doRequest();
 
-fs.readFile('multitask.js', 'utf8', () => {
+readFile('multitask.js', 'utf8', () => {
   console.log('FS:', Date.now() - start);
 });
 

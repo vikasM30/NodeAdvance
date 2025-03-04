@@ -3,5 +3,25 @@
     "bcrypt": "^5.1.1",
     "express": "^4.21.2",
     "http": "^0.0.1-security"
-  }
+  },
+  "name": "nodeadvance",
+  "version": "1.0.0",
+  "main": "get_threadpoolsize.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikasM30/NodeAdvance.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikasM30/NodeAdvance/issues"
+  },
+  "homepage": "https://github.com/vikasM30/NodeAdvance#readme",
+  "description": ""
 }

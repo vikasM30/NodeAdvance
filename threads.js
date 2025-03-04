@@ -1,5 +1,5 @@
-const http = require('http')
-const bcrypt = require('bcrypt')
+import { createServer } from 'http';
+import { hash as _hash } from 'bcrypt';
 
 /**
  * to not increase the threadpool size of the system to more than (Phisical +logical core) as:
@@ -8,8 +8,8 @@ const bcrypt = require('bcrypt')
 
 process.env.UV_THREADPOOL_SIZE = 12
 
-http.createServer((request, response) => {
-    bcrypt.hash("Vikas Mishra", 2).then((hash) => {
+createServer((request, response) => {
+    _hash("Vikas Mishra", 2).then((hash) => {
         response.writeHead(200, {'Content-Type': 'text/plain'});
         response.write(hash)
         response.end('Hello World');

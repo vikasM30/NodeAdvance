@@ -1,5 +1,5 @@
-const express = require('express')
-const { Worker } = require('worker_threads');
+import express from 'express';
+import { Worker } from 'worker_threads';
 const app = express()
 const port = 3000
 const THREAD_COUNT = 11
