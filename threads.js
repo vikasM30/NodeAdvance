@@ -16,4 +16,4 @@ createServer((request, response) => {
     })
 }).listen(3000);
 
-console.log('to check apachebench for multiple request with concurrency: ab -n 1000 -c 100 "http://127.0.0.1:3000/" | grep "Requests"');
+console.log('to check apachebench for multiple request with concurrency: ab -n 1000 -c 100 -s 40 -k "http://127.0.0.1:3000/" | grep "Requests"');

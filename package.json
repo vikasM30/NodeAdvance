@@ -2,13 +2,13 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "express": "^4.21.2",
-    "http": "^0.0.1-security"
+    "http": "^0.0.1-security",
+    "pm2": "^5.4.3"
   },
   "name": "nodeadvance",
   "version": "1.0.0",
   "main": "get_threadpoolsize.js",
   "type": "module",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
